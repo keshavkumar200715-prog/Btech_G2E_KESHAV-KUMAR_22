@@ -1,0 +1,9 @@
+def is_palindrome_math(n):
+    """Checks if a number is a palindrome using a mathematical loop."""
+    if n < 0:
+        return False  # Negative numbers are generally not palindromes.
+    original_num, reversed_num = n, 0
+    while n > 0:
+        reversed_num = (reversed_num * 10) + (n % 10)  # Extract and append digit.
+        n //= 10  # Remove last digit.
+    return original_num == reversed_num
