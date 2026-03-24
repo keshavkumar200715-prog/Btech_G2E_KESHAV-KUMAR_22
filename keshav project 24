@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int arr[] = {25, 40, 35, 20, 10, 80};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int smallest, largest;
+
+    // Initialize small and large with the first element
+    smallest = largest = arr[0];
+
+    // Traverse the array to find min and max
+    for(int i = 1; i < n ;i++){
+        if(arr[i] < smallest) 
+            smallest = arr[i];
+        else if(arr[i] > largest) 
+            largest = arr[i];
+    }
+
+    printf("Smallest: %d\n", smallest);
+    printf("Largest: %d", largest);
+    
+    return 0;
+}
