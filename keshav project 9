@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int array[5];
+    int i;
+
+    // Loop to accept 5 elements
+    printf("Enter 5 integer elements:\n");
+    for (i = 0; i < 5; i++) {
+        printf("Element %d: ", i + 1);
+        scanf("%d", &array[i]);
+    }
+
+    // Loop to display the 5 elements
+    printf("\nYou entered the following elements:\n");
+    for (i = 0; i < 5; i++) {
+        printf("Element %d: %d\n", i + 1, array[i]);
+    }
+
+    return 0;
+}
